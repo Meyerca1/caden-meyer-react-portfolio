@@ -1,4 +1,4 @@
-import React from "moment";
+import React from "react";
 
 export default function() {
     return(

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import moment from "moment";
 import{
   BrowserRouter as Router,
@@ -7,7 +7,9 @@ import{
 } from "react-router-dom"
 import PortfolioContainer from './portfolio/portfolio-container';
 import NavigationContainer from './navigation/navigation-container';
-import {  } from "module";
+import Home from './pages/home';
+import About from './pages/about';
+
 export default class App extends Component {
   render() {
     return (
@@ -19,7 +21,8 @@ export default class App extends Component {
             <NavigationContainer />  
 
             <Switch>
-              <Rout exact path="/" component={Home} />
+              <Route exact path="/" component={Home} />
+              <Route path="/about-me" component={About} />
             </Switch>
           </div>
         </Router>
