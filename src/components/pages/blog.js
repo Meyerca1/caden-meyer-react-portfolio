@@ -46,7 +46,9 @@ class Blog extends Component {
 
   onScroll() {
    
-      if(this.state.isLoading || this.state.blogItems.length === this.state.totalCount){
+      if(this.state.isLoading || 
+        this.state.blogItems.length === this.state.totalCount)
+        {
         return;
       }
 
@@ -63,7 +65,7 @@ class Blog extends Component {
   getBlogItems() {
     this.setState({
         currentPage: this.state.currentPage + 1
-    })  
+    });  
     axios
       .get(`https://cadenmeyer.devcamp.space/portfolio/portfolio_blogs?page=${this.
       state.currentPage}`, {
@@ -78,7 +80,7 @@ class Blog extends Component {
         });
       })
       .catch(error => {
-        console.log("getBolgItems error", error);
+        console.log("getBlogItems error", error);
       });
   }
 
@@ -102,11 +104,13 @@ class Blog extends Component {
         handleModalClose={this.handleModalClose}
         modalIsOpen={this.state.blogModalIsOpen} />
 
+        {/* {this.props.loggedInStatus === "LOGGED_IN" ? (
         <div className="new-blog-link">
           <a onClick={this.handleNewBlogClick}>
-            Open Modal!!
+            <FontAwesomeIcon icon="plus-circle"/>
           </a>
         </div>
+        ) : null} */}
 
 
         <div className="content-container">{blogRecords}</div>
