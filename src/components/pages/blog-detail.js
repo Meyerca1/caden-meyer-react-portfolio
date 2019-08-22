@@ -7,7 +7,7 @@ export default class BlogDetail extends Component{
         this.state = {
             currentId: this.props.match.params.slug,
             blogItem: {}
-        }
+        };
     }
 
     getBlogItem(){
@@ -15,7 +15,7 @@ export default class BlogDetail extends Component{
         ).then(response => {
             this.setState({
                 blogItem: response.data.portfolio_blog
-            })
+            });
         }).catch(error => {
             console.log("getBlogItem error", error);
         });

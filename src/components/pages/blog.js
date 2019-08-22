@@ -35,7 +35,7 @@ class Blog extends Component {
   handleModalClose(){
     this.setState({
       blogModalIsOpen: false
-    })
+    });
   }
 
   handleNewBlogClick(){
@@ -66,13 +66,12 @@ class Blog extends Component {
     this.setState({
         currentPage: this.state.currentPage + 1
     });  
-    axios
-      .get(`https://cadenmeyer.devcamp.space/portfolio/portfolio_blogs?page=${this.
+    axios.get(`https://cadenmeyer.devcamp.space/portfolio/portfolio_blogs?page=${this.
       state.currentPage}`, {
         withCredentials: true
       })
       .then(response => {
-        console.log("getting more posts", response.data); 
+        console.log("getting blog items", response.data); 
         this.setState({
           blogItems: this.state.blogItems.concat(response.data.portfolio_blogs),
           totalCount: response.data.meta.total_records,
@@ -104,13 +103,13 @@ class Blog extends Component {
         handleModalClose={this.handleModalClose}
         modalIsOpen={this.state.blogModalIsOpen} />
 
-        {/* {this.props.loggedInStatus === "LOGGED_IN" ? (
+        {this.props.loggedInStatus === "LOGGED_IN" ? (
         <div className="new-blog-link">
           <a onClick={this.handleNewBlogClick}>
             <FontAwesomeIcon icon="plus-circle"/>
           </a>
         </div>
-        ) : null} */}
+        ) : null}
 
 
         <div className="content-container">{blogRecords}</div>
