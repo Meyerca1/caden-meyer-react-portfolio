@@ -71,7 +71,7 @@ export default class BlogForm extends Component {
                 </div>
 
                 <div className="one-column">
-                <RichTextEditor/>
+                <RichTextEditor />
                 </div>
 
                 <button className= "btn">Save</button>
@@ -79,4 +79,4 @@ export default class BlogForm extends Component {
             </form>
         );
     }
-}
+}   
