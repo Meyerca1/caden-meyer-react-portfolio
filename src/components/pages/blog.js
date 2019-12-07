@@ -29,7 +29,7 @@ class Blog extends Component {
     this.setState({
       blogModalIsOpen: false,
       blogItems: [blog].concat(this.state.blogItems)
-    })
+    });
   }
 
   handleModalClose(){
