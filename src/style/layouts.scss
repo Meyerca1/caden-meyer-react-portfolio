@@ -1,17 +1,15 @@
-.bio-wrapper{
+.content-page-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100%;
-    .bio-image-wrapper img{
-        img{
-            width: 100%;
-        }
-    }
-
-    .bio-text-wrapper{
+    width: 100vw;
+    height: calc(100vh - 83px);
+    
+    .right-column{
         display: flex;
         justify-content: center;
-        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px;
     }
 
 }
