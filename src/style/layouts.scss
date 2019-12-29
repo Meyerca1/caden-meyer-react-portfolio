@@ -1,0 +1,17 @@
+.bio-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    .bio-image-wrapper img{
+        img{
+            width: 100%;
+        }
+    }
+
+    .bio-text-wrapper{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+}
