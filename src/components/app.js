@@ -57,7 +57,7 @@ export default class App extends Component {
 
 
 
-  checkLoginStatus(){
+  checkLoginStatus() {
     return axios.get("https://api.devcamp.space/logged_in", {
       withCredentials: true
     }).then(response => {
@@ -81,7 +81,7 @@ export default class App extends Component {
     })
     .catch(error => {
       console.log("Error", error);
-    })
+    });
   }
   
   componentDidMount() {
